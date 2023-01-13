@@ -36,7 +36,7 @@ public class BookHandler {
         return itemMono.flatMap(item ->
                 ServerResponse.ok()
                         .contentType(MediaType.APPLICATION_JSON)
-                        .body(                                                                                                                                                                                                                                                       fromValue(item))
+                        .body(fromValue(item))
                         .switchIfEmpty(notFound));
 
     }
